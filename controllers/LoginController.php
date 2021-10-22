@@ -28,8 +28,14 @@ final class LoginController
             'password'=>'number'
         ];
 
+        $old = [];
+        foreach ($_REQUEST as $key => $value)
+        {
+            $old[$key] = $value;
+        }
+
         if(sizeof(Validator::check($toValidate)) != 0)        
-            return View::render('login',Validator::check($toValidate));
+            return View::render('login',Validator::check($toValidate),$old);
         
         return View::render('index');
     }
