@@ -17,7 +17,7 @@
                 <form method="post" action="/login">
                     <div class="form-group">
                         <label for="login">Login</label>
-                        <input id="login" class="form-control" type="text" name="login" value="<?= $old['login'] ?>">
+                        <input id="login" class="form-control" type="text" name="login" value="<?php if(array_key_exists('login',$old)){?> <?= $old['login'] ?> <?php } ?>">
                         <?php if(array_key_exists('login',$data)){ ?>
                             <small class="text-danger">
                                 <?= $data['login'] ?>
