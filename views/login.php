@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="/<?= _ASSETS_PATH ?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="/<?= _ASSETS_PATH ?>toastr/toastr.min.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+    <script src="https://kit.fontawesome.com/637d7774d7.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="container-fluid">
@@ -40,6 +43,17 @@
             </div>
         </div>
     </div>
+    
+    <script src="/<?= _ASSETS_PATH ?>toastr/toastr.min.js"></script>
+    <?php if(array_key_exists('flash',$_SESSION)) { ?>
+    <script>
+        <?= ($_SESSION['type'] == 'success') ? 'toastr.success("'.$_SESSION['flash'].'");' : 'toastr.error("'.$_SESSION['flash'].'");' ?>
+    </script>
+    <?php }
+        unset($_SESSION['flash']);
+        unset($_SESSION['type']);
+    ?>
+
 </body>
 
 </html>

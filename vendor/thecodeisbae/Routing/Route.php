@@ -4,7 +4,8 @@ namespace thecodeisbae\Routing;
 
 final class Route
 {
-    /* ** Instanciation informations
+    /*
+        Instanciation informations
         private $_method;
         private $_main_segment;
         private $_params;

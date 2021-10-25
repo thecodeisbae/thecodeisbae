@@ -23,6 +23,8 @@ final class LoginController
     
     static function login()
     {
+        $_SESSION['flash'] = 'Fine let\'s go ahead';
+        $_SESSION['type'] = 'success';
         $toValidate = [
             'login'=>'onlyText',
             'password'=>'number'
