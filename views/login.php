@@ -17,7 +17,7 @@
         <div class="card col-md-4 col-sm-4  m-2">
             <div class="card-body">
                 <h5 class="card-title">Login</h5><hr>
-                <form method="post" action="/login">
+                <form method="post" action="/login" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="login">Login</label>
                         <input id="login" class="form-control" type="text" name="login" value="<?php if(array_key_exists('login',$old)){?> <?= $old['login'] ?> <?php } ?>">
@@ -35,6 +35,10 @@
                                 <?= $data['password'] ?>
                             </small>
                         <?php } ?>
+                    </div>  
+                    <div class="form-group">
+                        <label for="file">Filename</label>
+                        <input id="file" class="form-control" type="file" name="file">
                     </div>  
                     <div class="form-group">
                         <button class="btn btn-primary" type="submit">Submit</button>
