@@ -9,3 +9,4 @@ const _MODELS_PATH = _ROOT.'models\\';
 const _ROUTES_PATH = _ROOT.'routes\\';
 const _ASSETS_PATH = _ROOT.'public\\';
 const _STORAGE_PATH = _ROOT.'storage\\';
+const _FILES_PATH = _ROOT.'storage\\files\\';

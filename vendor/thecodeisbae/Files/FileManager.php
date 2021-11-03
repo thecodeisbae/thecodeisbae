@@ -23,6 +23,7 @@ final class FileManager
             if (!file_exists($to)) {
                 mkdir($to, 0500, true);
             }
+            
             if($rename)
                 $specfile = explode('.',$_FILES[$name]['name'])[0].'_'.strtotime(date("Y-m-d H:i:s")).'.'.explode('.',$_FILES[$name]['name'])[sizeof( explode('.',$_FILES[$name]['name']))-1];
             else
@@ -39,8 +40,22 @@ final class FileManager
         return ['code'=>'1','message'=>'Please check for your input name'];    
     }
 
-    static function lead($main_segment,$params,$controller,$function,$method = 'GET')
+    static function stream($filename)
     {
-        include(_CONTROLLERS_PATH.$controller.'.php');
+        if(strtolower(explode('.',$filename)[sizeof(explode('.',$filename))-1]) == 'pdf')
+        {
+            ini_set('memory_limit', '-1');
+            $filePath = _FILES_PATH.$filename;
+            header('Content-type:application/pdf');
+            header('Content-disposition: inline; filename="'.$filename.'"');
+            header('content-Transfer-Encoding:binary');
+            header('Accept-Ranges:bytes');
+            @readfile($filePath);
+        }
+        else{
+            return ['code'=>1,'message'=>'An error occured while loading your file please check its extension'];
+        }
+        
     }
+
 }

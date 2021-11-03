@@ -58,7 +58,7 @@ switch($function)
     break;
 
     case 'login':
-            LoginController::login();    
+        LoginController::login();    
     break;
 }
 
