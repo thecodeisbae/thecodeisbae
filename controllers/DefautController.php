@@ -5,7 +5,7 @@ include_once(_VENDOR_PATH.'\thecodeisbae\Utilities\Accumulator.php'); /** The cl
 include_once(_MODELS_PATH.'Activity.php');
 
 use thecodeisbae\Viewing\View as View;
-use thecodeisbae\Accumulator\Acculumator;
+use thecodeisbae\Accumulator\Accumulator;
 use thecodeisbae\Model\Activity;
 
 final class DefaultController
@@ -16,28 +16,31 @@ final class DefaultController
 
     static function index()
     {
-        Acculumator::init();
-        Acculumator::push('name','Marilyn');
-        Acculumator::push('infos',
+        Accumulator::init();
+        Accumulator::push('name','Marilyn');
+        Accumulator::push('infos',
             [
                 'id'=>1,
                 'age'=>15,
                 'sexe'=>'Male'
             ]
         );
-        return View::render('index',Acculumator::get());
+        return View::render('index',Accumulator::get());
     }
     
     static function about()
     {
         echo 'About page';die;
     }
+
     
     static function activities()
     {
-        Acculumator::init();
-        Acculumator::push('activities',Activity::all());
-        return View::render('activities',Acculumator::get());
+        Accumulator::init();
+        Accumulator::push('activities',Activity::all());
+        debug_history();
+        debug(Accumulator::get());
+        return View::render('activities',Accumulator::get());
     }
 }
 

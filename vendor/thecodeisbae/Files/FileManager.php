@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The class responsible of interactions with filesystem
  * Usage :
@@ -11,7 +12,8 @@
  * 
  *      Eg : FileManager::store(input_name_of_the_file,save_path,false)
  *  
- */
+**/
+
 namespace thecodeisbae\FileManager;
 
 final class FileManager
@@ -35,6 +37,7 @@ final class FileManager
             {
                 return ['savedAs'=>$specfile];
             }
+            return ['code'=>'2','message'=>'An error occured please check for savepath permissions'];   
         }
     
         return ['code'=>'1','message'=>'Please check for your input name'];    
@@ -54,8 +57,42 @@ final class FileManager
         }
         else{
             return ['code'=>1,'message'=>'An error occured while loading your file please check its extension'];
+        }  
+    }
+
+    static function download($filename)
+    { 
+        ini_set('memory_limit', '-1');
+        $filePath = _FILES_PATH.$filename;
+        header('Content-type:application/octet-stream');
+        header('Content-disposition: attachment; filename="'.$filename.'"');
+        header('content-Transfer-Encoding:binary');
+        header('Accept-Ranges:bytes');
+        @readfile($filePath);
+        exit(); 
+    }
+
+    static function delete($filename,$path = '')
+    {
+        if($path != '')
+        {        
+            $file_pointer = _FILES_PATH .$path.$filename; 
+            if(!file_exists($file_pointer))
+            {
+                return ['code'=>1,'message'=>'Please check the provided filepath'];
+            }
+            unlink($file_pointer);
+            return ['code'=>0,'message'=>'File deleted'];
         }
         
+        $file_pointer = _FILES_PATH.$filename;
+        if(!file_exists($file_pointer))
+        {
+            return ['code'=>2,'message'=>'The file was not found in default filepath, please provide the correct filepath'];
+        }
+        unlink($file_pointer);
+        return ['code'=>0,'message'=>'File deleted'];
+
     }
 
 }

@@ -7,7 +7,7 @@
 
 namespace thecodeisbae\Accumulator;
 
-final class Acculumator
+final class Accumulator
 {
     static protected $array = []; 
 

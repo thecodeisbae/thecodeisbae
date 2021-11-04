@@ -23,9 +23,10 @@ final class LoginController
         return View::render('login');
     }
     
+
     static function login()
     {
-        $saveName = FileManager::store('file',_STORAGE_PATH.'files\\');
+        debug(FileManager::delete('flutter.zip'));die;
         $_SESSION['flash'] = 'Fine let\'s go ahead';
         $_SESSION['type'] = 'success';
         $toValidate = [

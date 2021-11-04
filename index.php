@@ -3,6 +3,9 @@
 /** Include the contants variables  **/
 require_once('constants.php');
 
+/** Include the globals functions   **/
+require_once('functions.php');
+
 /** Setup database configuration **/
 require_once(_ROOT.'env.php');
 
