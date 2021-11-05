@@ -15,4 +15,3 @@
         echo '<pre style="background-color:black;color:white;padding:25px;">Running history<br><br>',print_r(debug_print_backtrace(),1),'</pre>';
         exit;
     }
-    

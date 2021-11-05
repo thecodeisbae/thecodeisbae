@@ -18,7 +18,7 @@ namespace thecodeisbae\FileManager;
 
 final class FileManager
 {
-    static function store($name,$to,$rename = true) : array
+    static function store($name,$to,$rename = true) : array /** Storing a file */
     {
         if(array_key_exists($name,$_FILES))
         {
@@ -72,7 +72,7 @@ final class FileManager
         exit(); 
     }
 
-    static function delete($filename,$path = '')
+    static function delete($filename,$path = '') /** The current function unlink or delete the file you provide in params, searching it on the provided path **/
     {
         if($path != '')
         {        

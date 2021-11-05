@@ -1,18 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
+    include_once(_VENDOR_PATH.'\thecodeisbae\LayoutManager\LayoutManager.php');
+    use thecodeisbae\LayoutManager\LayoutManager;
+    LayoutManager::init();
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/<?= _ASSETS_PATH ?>css/bootstrap.min.css">
-    <link rel="stylesheet" href="/<?= _ASSETS_PATH ?>toastr/toastr.min.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
-    <script src="https://kit.fontawesome.com/637d7774d7.js" crossorigin="anonymous"></script>
-</head>
+<?php LayoutManager::start_section('head') ?>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="/<?= _ASSETS_PATH ?>css/bootstrap.min.css">
+        <link rel="stylesheet" href="/<?= _ASSETS_PATH ?>toastr/toastr.min.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+        <script src="https://kit.fontawesome.com/637d7774d7.js" crossorigin="anonymous"></script>
+    </head>
+<?php LayoutManager::end_section('head') ?>
 
-<body class="container-fluid">
+<?php LayoutManager::start_section('content') ?>
     <div class="row justify-content-center align-content-center">
         <div class="card col-md-4 col-sm-4  m-2">
             <div class="card-body">
@@ -47,17 +52,18 @@
             </div>
         </div>
     </div>
-    
+<?php LayoutManager::end_section('content') ?>
+
+<?php LayoutManager::start_section('footer') ?>
     <script src="/<?= _ASSETS_PATH ?>toastr/toastr.min.js"></script>
     <?php if(array_key_exists('flash',$_SESSION)) { ?>
-    <script>
-        <?= ($_SESSION['type'] == 'success') ? 'toastr.success("'.$_SESSION['flash'].'");' : 'toastr.error("'.$_SESSION['flash'].'");' ?>
-    </script>
+        <script>
+            <?= ($_SESSION['type'] == 'success') ? 'toastr.success("'.$_SESSION['flash'].'");' : 'toastr.error("'.$_SESSION['flash'].'");' ?>
+        </script>
     <?php }
         unset($_SESSION['flash']);
         unset($_SESSION['type']);
     ?>
+<?php LayoutManager::end_section('footer') ?>
 
-</body>
-
-</html>
+<?php LayoutManager::set(_VIEWS_PATH.'app/layout.php'); ?>

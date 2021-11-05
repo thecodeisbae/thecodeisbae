@@ -26,6 +26,7 @@ final class LoginController
 
     static function login()
     {
+        debug_trace();
         debug(FileManager::delete('flutter.zip'));die;
         $_SESSION['flash'] = 'Fine let\'s go ahead';
         $_SESSION['type'] = 'success';
