@@ -1758,6 +1758,62 @@
             "install-path": "../symfony/translation-contracts"
         },
         {
+            "name": "thecodeisbae/utilities",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thecodeisbae/utilities.git",
+                "reference": "1aadbe6d18c26b6213a8e95b20847b3f53e70d63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thecodeisbae/utilities/zipball/1aadbe6d18c26b6213a8e95b20847b3f53e70d63",
+                "reference": "1aadbe6d18c26b6213a8e95b20847b3f53e70d63",
+                "shasum": ""
+            },
+            "require": {
+                "phpmailer/phpmailer": "^6.5"
+            },
+            "time": "2021-11-15T16:52:03+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "thecodeisbae\\FileManager\\": "thecodeisbae/src/Files/",
+                    "thecodeisbae\\LayoutManager\\": "thecodeisbae/src/LayoutManager/",
+                    "thecodeisbae\\Routing\\": "thecodeisbae/src/Routing/",
+                    "thecodeisbae\\Accumulator\\": "thecodeisbae/src/Utilities/",
+                    "thecodeisbae\\Validator\\": "thecodeisbae/src/Utilities/",
+                    "thecodeisbae\\Viewing\\": "thecodeisbae/src/Viewing/",
+                    "thecodeisbae\\Mailer\\": "thecodeisbae/src/Mailer/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marilyn Prince",
+                    "email": "thecodeisbae@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Utilities class for thecodeisbae framework",
+            "homepage": "https://github.com/thecodeisbae/utilities",
+            "keywords": [
+                "utilities",
+                "utils"
+            ],
+            "support": {
+                "issues": "https://github.com/thecodeisbae/utilities/issues",
+                "source": "https://github.com/thecodeisbae/utilities/tree/main"
+            },
+            "install-path": "../thecodeisbae/utilities"
+        },
+        {
             "name": "voku/portable-ascii",
             "version": "1.5.6",
             "version_normalized": "1.5.6.0",

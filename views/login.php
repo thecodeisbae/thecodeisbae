@@ -1,5 +1,4 @@
 <?php 
-    include_once(_VENDOR_PATH.'\thecodeisbae\LayoutManager\LayoutManager.php');
     use thecodeisbae\LayoutManager\LayoutManager;
     LayoutManager::init();
 ?>

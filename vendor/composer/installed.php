@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '5d7ec8e3555333bb4e95464a5481f87130f60490',
+        'reference' => 'feafe5c159bb6b346c0dd2c5772f85e8e96aea86',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '5d7ec8e3555333bb4e95464a5481f87130f60490',
+            'reference' => 'feafe5c159bb6b346c0dd2c5772f85e8e96aea86',
             'dev_requirement' => false,
         ),
         'doctrine/inflector' => array(
@@ -243,6 +243,17 @@
             'provided' => array(
                 0 => '2.3',
             ),
+        ),
+        'thecodeisbae/utilities' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../thecodeisbae/utilities',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'reference' => '1aadbe6d18c26b6213a8e95b20847b3f53e70d63',
+            'dev_requirement' => false,
         ),
         'voku/portable-ascii' => array(
             'pretty_version' => '1.5.6',

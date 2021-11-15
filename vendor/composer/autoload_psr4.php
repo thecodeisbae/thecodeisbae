@@ -7,6 +7,13 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'voku\\' => array($vendorDir . '/voku/portable-ascii/src/voku'),
+    'thecodeisbae\\Viewing\\' => array($vendorDir . '/thecodeisbae/utilities/thecodeisbae/src/Viewing'),
+    'thecodeisbae\\Validator\\' => array($vendorDir . '/thecodeisbae/utilities/thecodeisbae/src/Utilities'),
+    'thecodeisbae\\Routing\\' => array($vendorDir . '/thecodeisbae/utilities/thecodeisbae/src/Routing'),
+    'thecodeisbae\\Mailer\\' => array($vendorDir . '/thecodeisbae/utilities/thecodeisbae/src/Mailer'),
+    'thecodeisbae\\LayoutManager\\' => array($vendorDir . '/thecodeisbae/utilities/thecodeisbae/src/LayoutManager'),
+    'thecodeisbae\\FileManager\\' => array($vendorDir . '/thecodeisbae/utilities/thecodeisbae/src/Files'),
+    'thecodeisbae\\Accumulator\\' => array($vendorDir . '/thecodeisbae/utilities/thecodeisbae/src/Utilities'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Php73\\' => array($vendorDir . '/symfony/polyfill-php73'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),

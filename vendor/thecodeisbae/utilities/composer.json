@@ -1,0 +1,30 @@
+{
+    "name": "thecodeisbae/utilities",
+    "type": "library",
+    "version": "v1.0.0",
+    "description": "Utilities class for thecodeisbae framework",
+    "keywords": ["utils","utilities"],
+    "homepage": "https://github.com/thecodeisbae/utilities",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marilyn Prince",
+            "email": "thecodeisbae@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.5"
+    },
+    "autoload": {
+         "psr-4": {
+            "thecodeisbae\\FileManager\\": "thecodeisbae/src/Files/",
+            "thecodeisbae\\LayoutManager\\": "thecodeisbae/src/LayoutManager/",
+            "thecodeisbae\\Routing\\": "thecodeisbae/src/Routing/",
+            "thecodeisbae\\Accumulator\\": "thecodeisbae/src/Utilities/",
+            "thecodeisbae\\Validator\\": "thecodeisbae/src/Utilities/",
+            "thecodeisbae\\Viewing\\": "thecodeisbae/src/Viewing/",
+            "thecodeisbae\\Mailer\\": "thecodeisbae/src/Mailer/"
+        }
+    }
+}

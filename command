@@ -16,7 +16,7 @@ switch($argv[1])
         switch($argv[2])
         {
             case 'controller' :
-                $file = _CONTROLLERS_PATH.'\\'.$argv[3].'.php';
+                $file = _CONTROLLERS_PATH.$argv[3].'.php';
                 $output = 
                     "<?php\n
                     \n
@@ -54,7 +54,7 @@ switch($argv[1])
                 break;
 
                 case 'model' :
-                    $file = _MODELS_PATH.'\\'.$argv[3].'.php';
+                    $file = _MODELS_PATH.$argv[3].'.php';
                     $output = 
                         "<?php\n    
     namespace thecodeisbae\Model;\n
@@ -72,9 +72,9 @@ switch($argv[1])
                     }
                     break;
 
-                    case 'table' :
-                        $file = _DATABASE_PATH.'\\'.$argv[3].'.php';
-                        $output = 
+                case 'table' :
+                    $file = _DATABASE_PATH.$argv[3].'.php';
+                    $output = 
                             "<?php
     \nuse Illuminate\Database\Capsule\Manager as Capsule;
     \n
@@ -82,14 +82,14 @@ switch($argv[1])
             \n \$table->increments('id');
             \n \$table->timestamps();
     \n});\n";
-                        if(!file_exists($file))
-                        {
-                            file_put_contents($file, $output, FILE_APPEND | LOCK_EX);
-                            echo "Database table file\e[1;32m *".$argv[3]."*\e[0m is created successfully\n\n";
-                        }else{
-                            echo "Database table file\e[1;31m *".$argv[3]."*\e[0m already exist\n\n";
-                        }
-                        break;
+                    if(!file_exists($file))
+                    {
+                        file_put_contents($file, $output, FILE_APPEND | LOCK_EX);
+                        echo "Database table file\e[1;32m *".$argv[3]."*\e[0m is created successfully\n\n";
+                    }else{
+                        echo "Database table file\e[1;31m *".$argv[3]."*\e[0m already exist\n\n";
+                    }
+                    break;
 
             default :
                 echo "The \e[1;0;41m **".$argv[2]."** \e[0m command is unknown\n\n";

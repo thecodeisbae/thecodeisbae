@@ -1,6 +1,6 @@
 <?php
 
-include_once(_VENDOR_PATH.'\thecodeisbae\Routing\Route.php');
+// include_once(_VENDOR_PATH.'autoload.php');
 use thecodeisbae\Routing\Route as Route;
 
 /** Retrieve necessary infos from the request **/

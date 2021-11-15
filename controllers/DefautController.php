@@ -1,11 +1,9 @@
 <?php
 
-include_once(_VENDOR_PATH.'\thecodeisbae\Viewing\View.php'); /** The view rendering class **/
-include_once(_VENDOR_PATH.'\thecodeisbae\Utilities\Accumulator.php'); /** The class responsible of storing and passing data to view **/
 include_once(_MODELS_PATH.'Activity.php');
 
-use thecodeisbae\Viewing\View as View;
-use thecodeisbae\Accumulator\Accumulator;
+use thecodeisbae\Viewing\View as View; /** The view rendering class **/
+use thecodeisbae\Accumulator\Accumulator; /** The class responsible of storing and passing data to view **/
 use thecodeisbae\Model\Activity;
 
 final class DefaultController
