@@ -1,12 +1,13 @@
 <?php
 
-const _ROOT = '.\\';
-const _DATABASE_PATH =  _ROOT.'database\\';
-const _CONTROLLERS_PATH = _ROOT.'controllers\\';
-const _VENDOR_PATH = _ROOT.'vendor\\';
-const _VIEWS_PATH = _ROOT.'views\\';
-const _MODELS_PATH = _ROOT.'models\\';
-const _ROUTES_PATH = _ROOT.'routes\\';
-const _ASSETS_PATH = _ROOT.'public\\';
-const _STORAGE_PATH = _ROOT.'storage\\';
-const _FILES_PATH = _ROOT.'storage\\files\\';
+const _ROOT = '';
+const _DATABASE_PATH =  _ROOT.'database'.DIRECTORY_SEPARATOR;
+const _CONTROLLERS_PATH = _ROOT.'controllers'.DIRECTORY_SEPARATOR;
+const _VENDOR_PATH = _ROOT.'vendor'.DIRECTORY_SEPARATOR;
+const _VIEWS_PATH = _ROOT.'views'.DIRECTORY_SEPARATOR;
+const _MODELS_PATH = _ROOT.'models'.DIRECTORY_SEPARATOR;
+const _ROUTES_PATH = _ROOT.'routes'.DIRECTORY_SEPARATOR;
+const _ASSETS_PATH = _ROOT.'public'.DIRECTORY_SEPARATOR;
+const _STORAGE_PATH = _ROOT.'storage'.DIRECTORY_SEPARATOR;
+const _FILES_PATH = _ROOT.'storage'.DIRECTORY_SEPARATOR.'files'.DIRECTORY_SEPARATOR;
+const _SYSTEM_PATH = _ROOT.'system'.DIRECTORY_SEPARATOR;
