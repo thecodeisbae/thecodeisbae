@@ -11,6 +11,14 @@
         debug(debug_backtrace());
     }
 
+    function getParams() : stdClass
+    {
+        $config = parse_ini_file(_ROOT."params.ini", true);
+        $config = json_encode($config);
+        $config = json_decode($config);
+        return $config;
+    }
+
     function debug_history()
     {
         echo '<pre style="background-color:black;color:white;padding:25px;">Running history<br><br>',print_r(debug_print_backtrace(),1),'</pre>';

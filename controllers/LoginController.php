@@ -4,12 +4,14 @@ include_once(_VENDOR_PATH.'\thecodeisbae\Viewing\View.php'); /** The view render
 include_once(_VENDOR_PATH.'\thecodeisbae\Utilities\Accumulator.php'); /** The class responsible of storing and passing data to view **/
 include_once(_VENDOR_PATH.'\thecodeisbae\Utilities\Validator.php'); /** The class responsible of validating some form elements **/
 include_once(_VENDOR_PATH.'\thecodeisbae\Files\FileManager.php'); /** The class responsible of interacting with file manager **/
+include_once(_VENDOR_PATH.'\thecodeisbae\Mailer\Mailer.php'); /** The class responsible of sending emails **/
 include_once(_MODELS_PATH.'User.php');
 
 use thecodeisbae\Viewing\View as View;
 use thecodeisbae\Accumulator\Acculumator;
 use thecodeisbae\FileManager\FileManager;
 use thecodeisbae\Validator\Validator;
+use thecodeisbae\Mailer\Mailer;
 use thecodeisbae\Model\User;
 
 final class LoginController
@@ -20,6 +22,7 @@ final class LoginController
 
     static function index()
     {
+        Mailer::send('thecodeisbae@gmail.com','Sujet','Corps du message',_STORAGE_PATH.'files/vscode.pdf','VSCode.pdf');
         return View::render('login');
     }
     
