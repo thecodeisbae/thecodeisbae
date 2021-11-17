@@ -19,10 +19,6 @@ switch($argv[1])
                 $file = _CONTROLLERS_PATH.$argv[3].'.php';
                 $output = 
                     "<?php\n
-                    \n
-                        include_once(_VENDOR_PATH.'\\thecodeisbae\Viewing\View.php'); /** The view rendering class **/ \n
-                        include_once(_VENDOR_PATH.'\\thecodeisbae\Utilities\Accumulator.php'); /** The class responsible of storing and passing data to view **/ \n
-                    \n
 
                         use thecodeisbae\Viewing\View as View;\n
                         use thecodeisbae\Accumulator\Accumulator;\n

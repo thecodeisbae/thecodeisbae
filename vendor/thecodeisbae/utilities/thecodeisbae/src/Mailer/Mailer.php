@@ -6,8 +6,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require _VENDOR_PATH.'autoload.php';
-
 
 class Mailer
 {
