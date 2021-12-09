@@ -28,6 +28,21 @@ class Mailer
             $mail->setFrom($params->email->SMTPUser, $params->email->Service);
             $mail->addAddress($to);   
 
+            if($cc)
+            {
+                switch(gettype($cc))
+                {
+                    case 'string':
+                        $mail->addCC($cc);
+                        break;
+                    case 'array':
+                        foreach ($cc as $copy) {
+                            $mail->addCC($copy);
+                        }
+                        break;
+                }
+            }
+
             if($attachmentPath && $attachment)
             //Add attachments
                 $mail->addAttachment($attachmentPath,$attachment);   

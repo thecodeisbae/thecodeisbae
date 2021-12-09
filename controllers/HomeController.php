@@ -1,42 +1,27 @@
 <?php
 
+    use thecodeisbae\Viewing\View as View;
+    use thecodeisbae\Accumulator\Accumulator;
 
-                        use thecodeisbae\Viewing\View as View;
+    final class HomeController
+    {
+        static public $uri;
+        static public $params;
+        static public $method;
 
-                        use thecodeisbae\Accumulator\Accumulator;
+        
 
-                    
+    }
 
-                        final class HomeController
+    HomeController::$uri = $main_segment;
+    HomeController::$method = $method;
+    HomeController::$params = $params;
 
-                        {
+    switch($function)
+    {
 
-                            static public $uri;
+        default:
 
-                            static public $params;
+            break;
 
-                            static public $method;
-
-                        
-
-                        }
-
-                        
-
-                        HomeController::$uri = $main_segment;
-
-                        HomeController::$method = $method;
-
-                        HomeController::$params = $params;
-
-                        
-
-                        switch($function)
-
-                        {
-
-                            default:
-
-                                break;
-
-                        }
+    }
