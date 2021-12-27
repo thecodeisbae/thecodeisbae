@@ -32,11 +32,13 @@
         return $config;
     }
 
+    /** Retrieve an asset from assets path */
     function assets($path)
     {
         return _ASSETS_PATH.$path;
     }
 
+    /** Retrieve an file from storage files path */
     function storage($path)
     {
         return _STORAGE_PATH.'files/'.$path;
