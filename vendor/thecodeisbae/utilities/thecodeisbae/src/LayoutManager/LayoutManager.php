@@ -32,7 +32,7 @@ namespace thecodeisbae\LayoutManager;
 
 final class LayoutManager
 {
-    static protected $sections = []; /** Tye array for sections storage */
+    static protected $sections = []; /** Type array for sections storage */
 
     static function set($layout_file) /** Set the layout file and hydrate it */
     {

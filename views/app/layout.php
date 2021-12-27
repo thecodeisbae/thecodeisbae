@@ -1,14 +1,10 @@
-<?php     
-    use thecodeisbae\LayoutManager\LayoutManager;
-?>
-
 <!DOCTYPE html>
 <html lang="en">
-    <?= LayoutManager::section('head') ?>
+    <?= section('head') ?>
 
 <body class="container-fluid">
-    <?= LayoutManager::section('content') ?>
-    <?= LayoutManager::section('footer') ?>
+    <?= section('content') ?>
+    <?= section('footer') ?>
 </body>
 
 </html>

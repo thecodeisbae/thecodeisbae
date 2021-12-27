@@ -1,6 +1,5 @@
 <?php
 
-// include_once(_VENDOR_PATH.'autoload.php');
 use thecodeisbae\Routing\Route as Route;
 
 /** Retrieve necessary infos from the request **/
@@ -31,5 +30,9 @@ switch($_uri)
             Route::lead($_uri,$_params,'LoginController','index',$_method);
         if($_method == 'POST') 
             Route::lead($_uri,$_params,'LoginController','login',$_method);
+    break;
+
+    default :
+        Route::lead($_uri,$_params,'DefautController','error404',$_method);
     break;
 }

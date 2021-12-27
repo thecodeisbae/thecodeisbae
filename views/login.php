@@ -1,9 +1,8 @@
-<?php 
-    use thecodeisbae\LayoutManager\LayoutManager;
-    LayoutManager::init();
-?>
 
-<?php LayoutManager::start_section('head') ?>
+<?= debug_history(); ?>
+
+<?php layoutInit() ?>
+<?php startSection('head') ?>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,9 +13,9 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
         <script src="https://kit.fontawesome.com/637d7774d7.js" crossorigin="anonymous"></script>
     </head>
-<?php LayoutManager::end_section('head') ?>
+<?php endSection('head') ?>
 
-<?php LayoutManager::start_section('content') ?>    
+<?php startSection('content') ?>    
     <div class="row justify-content-center align-content-center">
         <div class="card col-md-4 col-sm-4  m-2">
             <div class="card-body">
@@ -51,9 +50,9 @@
             </div>
         </div>
     </div>
-<?php LayoutManager::end_section('content') ?>
+<?php endSection('content') ?>
 
-<?php LayoutManager::start_section('footer') ?>
+<?php startSection('footer') ?>
     <script src="<?= assets('toastr/toastr.min.js') ?>"></script>
     <?php if(array_key_exists('flash',$_SESSION)) { ?>
         <script>
@@ -63,6 +62,6 @@
         unset($_SESSION['flash']);
         unset($_SESSION['type']);
     ?>
-<?php LayoutManager::end_section('footer') ?>
+<?php endSection('footer') ?>
 
-<?php LayoutManager::set(_VIEWS_PATH.'app/layout.php'); ?>
+<?php setLayout('app/layout.php') ?>

@@ -31,12 +31,16 @@ final class DefaultController
         echo 'About page';die;
     }
 
+    static function error404()
+    {
+        return View::render('404');
+    }
     
     static function activities()
     {
         Accumulator::init();
         Accumulator::push('activities',Activity::all());
-        debug_history();
+        // debug_history();
         debug(Accumulator::get());
         return View::render('activities',Accumulator::get());
     }
@@ -54,6 +58,10 @@ switch($function)
     
     case 'about':
         DefaultController::about();    
+    break;
+    
+    case 'error404':
+        DefaultController::error404();    
     break;
     
     case 'activities':

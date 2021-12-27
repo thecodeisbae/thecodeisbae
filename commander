@@ -148,4 +148,5 @@ if(array_key_exists(1,$argv))
 }
 else{
     echo "Args after calling the \e[1;32mcommander\e[0m file is \e[1;31mmissing \e[0m \n\n";
+    break;
 }
