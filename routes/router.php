@@ -14,25 +14,14 @@ use thecodeisbae\Routing\Route as Route;
 switch($_uri)
 {
     case '':  
-        Route::lead($_uri,$_params,'DefautController','index',$_method);
+        Route::lead($_uri,$_params,'DefaultController','home',$_method);
     break;
 
-    case 'about':  
-        Route::lead($_uri,$_params,'DefautController','about',$_method);
-    break;
-
-    case 'activities':  
-        Route::lead($_uri,$_params,'DefautController','activities',$_method);
-    break;
-
-    case 'login': 
-        if($_method == 'GET') 
-            Route::lead($_uri,$_params,'LoginController','index',$_method);
-        if($_method == 'POST') 
-            Route::lead($_uri,$_params,'LoginController','login',$_method);
+    case 'home':  
+        Route::lead($_uri,$_params,'DefaultController','home',$_method);
     break;
 
     default :
-        Route::lead($_uri,$_params,'DefautController','error404',$_method);
+        Route::lead($_uri,$_params,'DefaultController','error404',$_method);
     break;
 }

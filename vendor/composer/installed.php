@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'feafe5c159bb6b346c0dd2c5772f85e8e96aea86',
+        'reference' => NULL,
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'feafe5c159bb6b346c0dd2c5772f85e8e96aea86',
+            'reference' => NULL,
             'dev_requirement' => false,
         ),
         'doctrine/inflector' => array(
@@ -253,6 +253,15 @@
                 0 => '9999999-dev',
             ),
             'reference' => '1aadbe6d18c26b6213a8e95b20847b3f53e70d63',
+            'dev_requirement' => false,
+        ),
+        'twilio/sdk' => array(
+            'pretty_version' => '6.33.1',
+            'version' => '6.33.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../twilio/sdk',
+            'aliases' => array(),
+            'reference' => '569441b5e63e41d8fea3907298718eb569c980b0',
             'dev_requirement' => false,
         ),
         'voku/portable-ascii' => array(

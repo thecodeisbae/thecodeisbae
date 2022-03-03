@@ -23,28 +23,27 @@ if(array_key_exists(1,$argv))
                     {
                 $file = _CONTROLLERS_PATH.$argv[3].'.php';
         $output = 
-            "<?php\n
+            "<?php
 
-                use thecodeisbae\Viewing\View as View;\n
-                use thecodeisbae\Accumulator\Accumulator;\n
+                use thecodeisbae\Viewing\View as View;
+                use thecodeisbae\Accumulator\Accumulator;
             \n
-                final class $argv[3]\n
-                {\n
-                    static public \$uri;\n
-                    static public \$params;\n
-                    static public \$method;\n
+                final class $argv[3]
+                {
+                    static public \$uri;
+                    static public \$params;
+                    static public \$method;
+                }
                 \n
-                }\n
+                $argv[3]::\$uri = \$main_segment;
+                $argv[3]::\$method = \$method;
+                $argv[3]::\$params = \$params;
                 \n
-                $argv[3]::\$uri = \$main_segment;\n
-                $argv[3]::\$method = \$method;\n
-                $argv[3]::\$params = \$params;\n
-                \n
-                switch(\$function)\n
-                {\n
-                    default:\n
-                        break;\n
-                }\n";
+                switch(\$function)
+                {
+                    default:
+                        break;
+                }";
         if(!file_exists($file))
         {
             file_put_contents($file, $output, FILE_APPEND | LOCK_EX);
@@ -63,11 +62,11 @@ if(array_key_exists(1,$argv))
                     $file = _MODELS_PATH.$argv[3].'.php';
                     $output = 
                         "<?php\n    
-    namespace thecodeisbae\Model;\n
-    use Illuminate\Database\Eloquent\Model as Eloquent;\n
-    \n
-    class $argv[3] extends Eloquent\n
-    {\n\n
+    namespace thecodeisbae\Model;
+    use Illuminate\Database\Eloquent\Model as Eloquent;
+    
+    class $argv[3] extends Eloquent
+    {\n
     }";
                     if(!file_exists($file))
                     {
@@ -88,8 +87,8 @@ if(array_key_exists(1,$argv))
                     $output = 
                             "<?php
     \nuse Illuminate\Database\Capsule\Manager as Capsule;
-    \n
-    \nCapsule::schema()->create('".strtolower($argv[3])."', function (\$table) \n{
+    
+Capsule::schema()->create('".strtolower($argv[3])."', function (\$table) \n{
             \n \$table->increments('id');
             \n \$table->timestamps();
     \n});\n";
@@ -137,7 +136,7 @@ if(array_key_exists(1,$argv))
 
         case 'launch' :         
                 echo "\n\e[1;32mWe were launching your app... \e[0m \n\n";
-                exec("php -S localhost:8000");
+                exec("php -S 127.0.0.1:8000");
             break;
         
 
@@ -148,5 +147,4 @@ if(array_key_exists(1,$argv))
 }
 else{
     echo "Args after calling the \e[1;32mcommander\e[0m file is \e[1;31mmissing \e[0m \n\n";
-    break;
 }

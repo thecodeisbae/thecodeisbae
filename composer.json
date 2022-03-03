@@ -2,6 +2,7 @@
     "require": {
         "illuminate/database": "^8.65",
         "phpmailer/phpmailer": "^6.5",
-        "thecodeisbae/utilities": "dev-main"
+        "thecodeisbae/utilities": "dev-main",
+        "twilio/sdk": "^6.33"
     }
 }

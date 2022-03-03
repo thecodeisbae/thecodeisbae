@@ -35,6 +35,10 @@ class ComposerStaticInit8423b7ad93ee036a638d022f032b6170
             'thecodeisbae\\FileManager\\' => 25,
             'thecodeisbae\\Accumulator\\' => 25,
         ),
+        'T' => 
+        array (
+            'Twilio\\' => 7,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -104,6 +108,10 @@ class ComposerStaticInit8423b7ad93ee036a638d022f032b6170
         'thecodeisbae\\Accumulator\\' => 
         array (
             0 => __DIR__ . '/..' . '/thecodeisbae/utilities/thecodeisbae/src/Utilities',
+        ),
+        'Twilio\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twilio/sdk/src/Twilio',
         ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (

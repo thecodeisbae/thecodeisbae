@@ -1,7 +1,7 @@
 <?php
 
 session_save_path(_STORAGE_PATH.'sessions');
-// session_name('thecodeisbae_'.random_int(123456789,999999999));
+session_name('thecodeisbae');
 session_start();
 
 include(_VENDOR_PATH.'autoload.php');

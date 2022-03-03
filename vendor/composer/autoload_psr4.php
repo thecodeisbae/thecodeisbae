@@ -14,6 +14,7 @@ return array(
     'thecodeisbae\\LayoutManager\\' => array($vendorDir . '/thecodeisbae/utilities/thecodeisbae/src/LayoutManager'),
     'thecodeisbae\\FileManager\\' => array($vendorDir . '/thecodeisbae/utilities/thecodeisbae/src/Files'),
     'thecodeisbae\\Accumulator\\' => array($vendorDir . '/thecodeisbae/utilities/thecodeisbae/src/Utilities'),
+    'Twilio\\' => array($vendorDir . '/twilio/sdk/src/Twilio'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Php73\\' => array($vendorDir . '/symfony/polyfill-php73'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),

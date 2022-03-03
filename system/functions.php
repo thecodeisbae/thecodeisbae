@@ -14,7 +14,6 @@
     {
         debug(debug_backtrace());
     }
-
     
     /** Return the running history of the script using stack */
     function debug_history() 
@@ -72,4 +71,10 @@
     function section($name)
     {
         return LayoutManager::section($name);
+    }
+
+    function redirect($uri)
+    {
+        header("Location: ".$uri);
+        die;
     }
