@@ -12,7 +12,6 @@ echo "*****************************************************\n\n";
 
 if(array_key_exists(1,$argv))
 {
-        
     switch($argv[1])
     {
         case 'add' :
@@ -89,8 +88,8 @@ if(array_key_exists(1,$argv))
     \nuse Illuminate\Database\Capsule\Manager as Capsule;
     
 Capsule::schema()->create('".strtolower($argv[3])."', function (\$table) \n{
-            \n \$table->increments('id');
-            \n \$table->timestamps();
+            \n\$table->increments('id');
+            \n\$table->timestamps();
     \n});\n";
                     if(!file_exists($file))
                     {
@@ -135,7 +134,8 @@ Capsule::schema()->create('".strtolower($argv[3])."', function (\$table) \n{
             break;
 
         case 'launch' :         
-                echo "\n\e[1;32mWe were launching your app... \e[0m \n\n";
+                echo "\n\e[1;32mWe were launching your app... \e[0m";
+                echo "\n\e[1;32mHave fun \e[0m \n\n";
                 exec("php -S 127.0.0.1:8000");
             break;
         
