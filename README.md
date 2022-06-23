@@ -2,7 +2,7 @@
 
 It's based on full POO PHP and MVC concept using 
 the ORM *Eloquent* for models and database usage.  
-Any contributions and ideas are welcome.
+Any contributions and ideas are welcome for evolving.
 
 ## 1. GitHub Stats
 ![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=thecodeisbae&show_icons=true)
