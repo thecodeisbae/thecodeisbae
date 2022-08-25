@@ -19,7 +19,7 @@
 ############################################
 ## always send 404 on missing files in these folders
 
-    RewriteCond %{REQUEST_URI} !^/(media|skin|js|css)/
+    RewriteCond %{REQUEST_URI} !^/(media|skin|js|css|public)/
 
 ############################################
 ## never rewrite for existing files, directories and links
