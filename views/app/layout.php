@@ -19,27 +19,24 @@
                 border-style:none;
             }
             @font-face {
-                font-family: Dosis;
-                src: url('<?= assets('tcb/fonts/Dosis-VariableFont_wght.ttf') ?>') format('truetype');
+                font-family: Exo;
+                src: url('<?= assets('/tcb/fonts/Exo2-Regular.ttf') ?>') format('truetype');
             }
             body{
-                font-family:Dosis;
+                font-family:Exo!important;
+            }
+            .tcb-bg{
+                background: url(<?= assets('/tcb/thecodeisbae.png') ?>);
             }
         </style>
     </head>
-    <body>
+    <body class="bg-dark">
         <?= section('content') ?>
-        <div class="container-fluid mt-5">
+        <div class="container-fluid mt-5 text-light">
             <div class="row justify-content-center mt-5 mb-5">
-                <div class="card col-md-4 glass mt-5 border-none">
-                    <div class="card-body">
-                        <p class="card-text" align="center">
-                            <a href="#"><img class="img-fluid" src="<?= assets('tcb/thecodeisbae.png') ?>" alt=""></a>
-                        </p>
-                    </div>
-                </div>
-                <div class="card col-md-4 glass mt-5">
-                    <h3 class="mt-5"><strong>TheCodeIsBae</strong></h3><hr>
+                <div class="card col-md-6 glass mt-5">
+                    <h3 class="mt-5"><strong>TheCodeIsBae</strong></h3>
+                    <hr class="border-white">
                     <div class="card-body m-3">
                         <p class="card-text" style="text-style:justify">
                             Mini framework <strong>PHP</strong> on going. 
